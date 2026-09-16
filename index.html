@@ -11,61 +11,60 @@
 :root{
   --bg:#f4f2ec; --card:#ffffff; --ink:#17140f; --sec:#52514e; --mut:#898781;
   --bd:#e1e0d9; --bds:#c3c2b7; --amb:#9a6a00; --grn:#127a3e; --red:#b42318; --accent:#0f6d66;
-  --accent-soft:#e4f0ef;
+  --accent-soft:#e4f0ef; --zebra:#f8f7f2;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#14130f; --card:#1c1a15; --ink:#f0ede4; --sec:#b8b5aa; --mut:#8b887d;
     --bd:#34322a; --bds:#46443a; --amb:#d7a233; --grn:#3fbf76; --red:#ef6f61; --accent:#3fbdb3;
-    --accent-soft:#1c2f2d;
+    --accent-soft:#1c2f2d; --zebra:#201e18;
   }
 }
 :root[data-theme="dark"]{
   --bg:#14130f; --card:#1c1a15; --ink:#f0ede4; --sec:#b8b5aa; --mut:#8b887d;
   --bd:#34322a; --bds:#46443a; --amb:#d7a233; --grn:#3fbf76; --red:#ef6f61; --accent:#3fbdb3;
-  --accent-soft:#1c2f2d;
+  --accent-soft:#1c2f2d; --zebra:#201e18;
 }
 *{box-sizing:border-box;}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,sans-serif;
   -webkit-font-smoothing:antialiased;padding:36px 20px 60px;}
-.wrap{max-width:980px;margin:0 auto;}
+.wrap{max-width:1040px;margin:0 auto;}
 .eyebrow{font-size:12px;letter-spacing:.10em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:6px;}
 h1{font-family:'Fraunces',serif;font-weight:600;font-size:44px;margin:0 0 6px;text-wrap:balance;letter-spacing:-.01em;}
-.scope{color:var(--sec);font-size:14.5px;max-width:64ch;line-height:1.5;}
+.scope{color:var(--sec);font-size:14.5px;max-width:70ch;line-height:1.55;}
 .scope b{color:var(--ink);}
 header{margin-bottom:34px;padding-bottom:22px;border-bottom:1px solid var(--bd);}
-h2{font-family:'Fraunces',serif;font-weight:600;font-size:24px;margin:0 0 2px;}
-.hero-sub{color:var(--mut);font-size:13px;margin-bottom:18px;}
-.hero{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:26px 28px 20px;margin-bottom:22px;}
-.hero-head{margin-bottom:16px;}
-.stat-row{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:20px;}
-.stat{min-width:130px;flex:1;}
-.stat-lab{font-size:12px;color:var(--sec);margin-bottom:4px;line-height:1.35;}
+h2{font-family:'Fraunces',serif;font-weight:600;font-size:26px;margin:0 0 2px;}
+.hero-sub{color:var(--mut);font-size:13.5px;margin-bottom:20px;}
+.hero{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:28px 30px 24px;margin-bottom:24px;}
+.hero-head{margin-bottom:18px;}
+.stat-row{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:24px;}
+.stat{min-width:140px;flex:1;}
+.stat-lab{font-size:12.5px;color:var(--sec);margin-bottom:5px;line-height:1.4;}
 .stat-lab .mut{color:var(--mut);}
-.stat-val{font-family:'IBM Plex Mono',monospace;font-size:26px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.01em;}
-.stat-val .unit{font-size:15px;color:var(--sec);font-weight:500;margin-left:1px;}
-.chip{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;margin-top:5px;font-family:'IBM Plex Sans',sans-serif;}
+.stat-val{font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.01em;}
+.stat-val .unit{font-size:16px;color:var(--sec);font-weight:500;margin-left:1px;}
+.chip{display:inline-block;font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:20px;margin-top:6px;font-family:'IBM Plex Sans',sans-serif;}
 .chip.up{background:var(--accent-soft);color:var(--grn);}
 .chip.down{background:var(--accent-soft);color:var(--red);}
-.chip.flat{background:var(--bd);color:var(--sec);}
 .chip.neutral{background:var(--bd);color:var(--sec);}
-.spark-row{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:6px;}
-.spark-box{flex:1;min-width:260px;background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:10px 14px 4px;}
-.spark-lab{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px;}
+.spark-row{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:22px;}
+.spark-box{flex:1;min-width:280px;background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:12px 16px 6px;}
+.spark-lab{font-size:11.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;}
 .spark{display:block;width:100%;height:auto;}
-details.wk-detail{margin-top:14px;}
-summary{cursor:pointer;font-size:13px;color:var(--accent);font-weight:600;user-select:none;}
-summary::marker{color:var(--mut);}
-table.wktable{width:100%;border-collapse:collapse;margin-top:14px;font-size:13.5px;}
-table.wktable th{text-align:right;color:var(--mut);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em;padding:6px 8px;border-bottom:1px solid var(--bds);}
+.wk-detail{margin-top:8px;}
+.wk-detail-lab{font-size:13px;color:var(--sec);font-weight:600;margin-bottom:10px;}
+table.wktable{width:100%;border-collapse:collapse;font-size:16px;}
+table.wktable th{text-align:right;color:var(--sec);font-weight:600;font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;
+  padding:11px 14px;border-bottom:2px solid var(--bds);background:var(--zebra);}
 table.wktable th:first-child, table.wktable td.wk{text-align:left;}
-table.wktable td{padding:7px 8px;border-bottom:1px solid var(--bd);}
-table.wktable td.num{text-align:right;font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;}
-.others table.wktable td.wk{font-weight:500;}
-.others{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:24px 28px;margin-bottom:22px;}
-footer{color:var(--mut);font-size:12px;line-height:1.6;margin-top:30px;padding-top:16px;border-top:1px solid var(--bd);}
+table.wktable td{padding:13px 14px;border-bottom:1px solid var(--bd);}
+table.wktable tbody tr:nth-child(even){background:var(--zebra);}
+table.wktable td.wk{font-weight:500;white-space:nowrap;}
+table.wktable td.num{text-align:right;font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;font-size:16px;}
+footer{color:var(--mut);font-size:12.5px;line-height:1.65;margin-top:32px;padding-top:18px;border-top:1px solid var(--bd);}
 .wrap-x{overflow-x:auto;}
-@media (max-width:640px){ h1{font-size:32px;} .stat-row{gap:16px;} }
+@media (max-width:640px){ h1{font-size:32px;} .stat-row{gap:18px;} table.wktable{font-size:14px;} table.wktable td.num{font-size:14px;} }
 </style>
 </head>
 <body>
@@ -74,8 +73,7 @@ footer{color:var(--mut);font-size:12px;line-height:1.6;margin-top:30px;padding-t
     <div class="eyebrow">Vendor Performance Scorecard</div>
     <h1>Narith</h1>
     <div class="scope">Voice and email contacts handled by Narith-affiliated agents across OpenLoop Health Partners
-      clients. Window: <b>Aug 3–9 – Sep 7–13 (complete) + Sep 14–20 (in progress)</b>. Two clients highlighted below at Narith's largest volume; remaining
-      supported clients summarized underneath.</div>
+      clients. Window: <b>Aug 3–9 – Sep 7–13 (complete) + Sep 14–20 (in progress)</b>.</div>
   </header>
 
   
@@ -110,13 +108,13 @@ footer{color:var(--mut);font-size:12px;line-height:1.6;margin-top:30px;padding-t
     </div>
   </div>
   <div class="spark-row">
-    <div class="spark-box"><div class="spark-lab">Voice volume — 7 weeks</div><svg width="300" height="70" viewBox="0 0 300 70" class="spark" role="img" aria-label="trend"><path d="M10.0,52.6 L56.7,40.0 L103.3,22.9 L150.0,10.0 L196.7,12.0 L243.3,23.4 L290.0,60.0" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.0" cy="52.6" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="56.7" cy="40.0" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="103.3" cy="22.9" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="150.0" cy="10.0" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="196.7" cy="12.0" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="243.3" cy="23.4" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="290.0" cy="60.0" r="3.4" fill="var(--accent)" opacity="1"/></svg></div>
-    <div class="spark-box"><div class="spark-lab">Avg speed of answer — 7 weeks</div><svg width="300" height="70" viewBox="0 0 300 70" class="spark" role="img" aria-label="trend"><path d="M10.0,10.0 L56.7,45.8 L103.3,53.1 L150.0,59.3 L196.7,57.1 L243.3,59.1 L290.0,60.0" fill="none" stroke="var(--amb)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.0" cy="10.0" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="56.7" cy="45.8" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="103.3" cy="53.1" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="150.0" cy="59.3" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="196.7" cy="57.1" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="243.3" cy="59.1" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="290.0" cy="60.0" r="3.4" fill="var(--amb)" opacity="1"/></svg></div>
+    <div class="spark-box"><div class="spark-lab">Voice volume — 7 weeks</div><svg width="300" height="70" viewBox="0 0 300 70" class="spark" role="img" aria-label="trend"><path d="M10.0,52.6 L56.7,40.0 L103.3,22.9 L150.0,10.0 L196.7,12.0 L243.3,23.4 L290.0,60.0" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.0" cy="52.6" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="56.7" cy="40.0" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="103.3" cy="22.9" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="150.0" cy="10.0" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="196.7" cy="12.0" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="243.3" cy="23.4" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="290.0" cy="60.0" r="3.4" fill="var(--accent)" opacity="1"/></svg></div>
+    <div class="spark-box"><div class="spark-lab">Avg speed of answer — 7 weeks</div><svg width="300" height="70" viewBox="0 0 300 70" class="spark" role="img" aria-label="trend"><path d="M10.0,10.0 L56.7,45.8 L103.3,53.1 L150.0,59.3 L196.7,57.1 L243.3,59.1 L290.0,60.0" fill="none" stroke="var(--amb)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.0" cy="10.0" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="56.7" cy="45.8" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="103.3" cy="53.1" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="150.0" cy="59.3" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="196.7" cy="57.1" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="243.3" cy="59.1" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="290.0" cy="60.0" r="3.4" fill="var(--amb)" opacity="1"/></svg></div>
   </div>
-  <details class="wk-detail">
-    <summary>Week-by-week detail</summary>
-    <div class='wrap-x'><table class='wktable'><thead><tr><th>Week</th><th>Voice&nbsp;answered</th><th>ASA</th><th>AHT</th><th>Email&nbsp;replies</th><th>FRT&nbsp;≤4h</th></tr></thead><tbody><tr><td class='wk'>Aug 3–9</td><td class='num'>3,355</td><td class='num'>28:54</td><td class='num'>11.0m</td><td class='num'>17,382</td><td class='num'>22%</td></tr><tr><td class='wk'>Aug 10–16</td><td class='num'>6,008</td><td class='num'>8:38</td><td class='num'>11.5m</td><td class='num'>12,660</td><td class='num'>30%</td></tr><tr><td class='wk'>Aug 17–23</td><td class='num'>9,613</td><td class='num'>4:28</td><td class='num'>12.2m</td><td class='num'>8,245</td><td class='num'>23%</td></tr><tr><td class='wk'>Aug 24–30</td><td class='num'>12,327</td><td class='num'>1:00</td><td class='num'>12.1m</td><td class='num'>5,843</td><td class='num'>24%</td></tr><tr><td class='wk'>Aug 31–Sep 6</td><td class='num'>11,916</td><td class='num'>2:14</td><td class='num'>11.8m</td><td class='num'>5,849</td><td class='num'>19%</td></tr><tr><td class='wk'>Sep 7–13</td><td class='num'>9,495</td><td class='num'>1:05</td><td class='num'>11.6m</td><td class='num'>3,525</td><td class='num'>29%</td></tr><tr><td class='wk'>Sep 14–20 <span class="chip neutral">in progress</span></td><td class='num'>1,797</td><td class='num'>35s</td><td class='num'>11.6m</td><td class='num'>357</td><td class='num'>45%</td></tr></tbody></table></div>
-  </details>
+  <div class="wk-detail">
+    <div class="wk-detail-lab">Week-by-week</div>
+    <div class='wrap-x'><table class='wktable'><thead><tr><th>Week</th><th>Voice&nbsp;answered</th><th>ASA</th><th>AHT</th><th>Email&nbsp;replies</th><th>FRT&nbsp;≤4h</th></tr></thead><tbody><tr><td class='wk'>Aug 3–9</td><td class='num'>3,355</td><td class='num'>28:54</td><td class='num'>11.0m</td><td class='num'>17,382</td><td class='num'>22%</td></tr><tr><td class='wk'>Aug 10–16</td><td class='num'>6,008</td><td class='num'>8:38</td><td class='num'>11.5m</td><td class='num'>12,660</td><td class='num'>30%</td></tr><tr><td class='wk'>Aug 17–23</td><td class='num'>9,613</td><td class='num'>4:28</td><td class='num'>12.2m</td><td class='num'>8,245</td><td class='num'>23%</td></tr><tr><td class='wk'>Aug 24–30</td><td class='num'>12,327</td><td class='num'>1:00</td><td class='num'>12.1m</td><td class='num'>5,843</td><td class='num'>24%</td></tr><tr><td class='wk'>Aug 31–Sep 6</td><td class='num'>11,916</td><td class='num'>2:14</td><td class='num'>11.8m</td><td class='num'>5,849</td><td class='num'>19%</td></tr><tr><td class='wk'>Sep 7–13</td><td class='num'>9,495</td><td class='num'>1:05</td><td class='num'>11.6m</td><td class='num'>3,525</td><td class='num'>29%</td></tr><tr><td class='wk'>Sep 14–20 <span class='chip neutral'>in progress</span></td><td class='num'>1,797</td><td class='num'>35s</td><td class='num'>11.6m</td><td class='num'>357</td><td class='num'>45%</td></tr></tbody></table></div>
+  </div>
 </section>
   
 <section class="hero">
@@ -150,22 +148,13 @@ footer{color:var(--mut);font-size:12px;line-height:1.6;margin-top:30px;padding-t
     </div>
   </div>
   <div class="spark-row">
-    <div class="spark-box"><div class="spark-lab">Voice volume — 7 weeks</div><svg width="300" height="70" viewBox="0 0 300 70" class="spark" role="img" aria-label="trend"><path d="M10.0,60.0 L56.7,57.2 L103.3,52.5 L150.0,51.3 L196.7,10.0 L243.3,14.2 L290.0,51.8" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.0" cy="60.0" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="56.7" cy="57.2" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="103.3" cy="52.5" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="150.0" cy="51.3" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="196.7" cy="10.0" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="243.3" cy="14.2" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="290.0" cy="51.8" r="3.4" fill="var(--accent)" opacity="1"/></svg></div>
-    <div class="spark-box"><div class="spark-lab">Avg speed of answer — 7 weeks</div><svg width="300" height="70" viewBox="0 0 300 70" class="spark" role="img" aria-label="trend"><path d="M10.0,10.0 L56.7,47.6 L103.3,52.9 L150.0,58.7 L196.7,52.8 L243.3,58.0 L290.0,60.0" fill="none" stroke="var(--amb)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.0" cy="10.0" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="56.7" cy="47.6" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="103.3" cy="52.9" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="150.0" cy="58.7" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="196.7" cy="52.8" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="243.3" cy="58.0" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="290.0" cy="60.0" r="3.4" fill="var(--amb)" opacity="1"/></svg></div>
+    <div class="spark-box"><div class="spark-lab">Voice volume — 7 weeks</div><svg width="300" height="70" viewBox="0 0 300 70" class="spark" role="img" aria-label="trend"><path d="M10.0,60.0 L56.7,57.2 L103.3,52.5 L150.0,51.3 L196.7,10.0 L243.3,14.2 L290.0,51.8" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.0" cy="60.0" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="56.7" cy="57.2" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="103.3" cy="52.5" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="150.0" cy="51.3" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="196.7" cy="10.0" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="243.3" cy="14.2" r="2.2" fill="var(--accent)" opacity="0.55"/><circle cx="290.0" cy="51.8" r="3.4" fill="var(--accent)" opacity="1"/></svg></div>
+    <div class="spark-box"><div class="spark-lab">Avg speed of answer — 7 weeks</div><svg width="300" height="70" viewBox="0 0 300 70" class="spark" role="img" aria-label="trend"><path d="M10.0,10.0 L56.7,47.6 L103.3,52.9 L150.0,58.7 L196.7,52.8 L243.3,58.0 L290.0,60.0" fill="none" stroke="var(--amb)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.0" cy="10.0" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="56.7" cy="47.6" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="103.3" cy="52.9" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="150.0" cy="58.7" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="196.7" cy="52.8" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="243.3" cy="58.0" r="2.2" fill="var(--amb)" opacity="0.55"/><circle cx="290.0" cy="60.0" r="3.4" fill="var(--amb)" opacity="1"/></svg></div>
   </div>
-  <details class="wk-detail">
-    <summary>Week-by-week detail</summary>
-    <div class='wrap-x'><table class='wktable'><thead><tr><th>Week</th><th>Voice&nbsp;answered</th><th>ASA</th><th>AHT</th><th>Email&nbsp;replies</th><th>FRT&nbsp;≤4h</th></tr></thead><tbody><tr><td class='wk'>Aug 3–9</td><td class='num'>171</td><td class='num'>31:22</td><td class='num'>12.2m</td><td class='num'>162</td><td class='num'>36%</td></tr><tr><td class='wk'>Aug 10–16</td><td class='num'>261</td><td class='num'>8:03</td><td class='num'>12.5m</td><td class='num'>199</td><td class='num'>23%</td></tr><tr><td class='wk'>Aug 17–23</td><td class='num'>411</td><td class='num'>4:47</td><td class='num'>13.3m</td><td class='num'>270</td><td class='num'>34%</td></tr><tr><td class='wk'>Aug 24–30</td><td class='num'>448</td><td class='num'>1:09</td><td class='num'>13.5m</td><td class='num'>348</td><td class='num'>41%</td></tr><tr><td class='wk'>Aug 31–Sep 6</td><td class='num'>1,761</td><td class='num'>4:50</td><td class='num'>11.9m</td><td class='num'>363</td><td class='num'>50%</td></tr><tr><td class='wk'>Sep 7–13</td><td class='num'>1,626</td><td class='num'>1:37</td><td class='num'>11.5m</td><td class='num'>125</td><td class='num'>35%</td></tr><tr><td class='wk'>Sep 14–20 <span class="chip neutral">in progress</span></td><td class='num'>432</td><td class='num'>21s</td><td class='num'>11.9m</td><td class='num'>3</td><td class='num'>67%</td></tr></tbody></table></div>
-  </details>
-</section>
-  
-<section class="others">
-  <h2>Other supported clients</h2>
-  <div class="hero-sub">Week of Sep 7–13 · smaller Narith footprint, shown for completeness</div>
-  <div class="wrap-x"><table class="wktable">
-    <thead><tr><th>Client</th><th>Voice&nbsp;answered</th><th>ASA</th><th>AHT</th><th>Email&nbsp;replies</th><th>FRT&nbsp;≤4h</th></tr></thead>
-    <tbody><tr><td class='wk'>Thrive Le-Vel</td><td class='num'>95</td><td class='num'>26s</td><td class='num'>13.1m</td><td class='num'>169</td><td class='num'>16%</td></tr><tr><td class='wk'>Elixa</td><td class='num'>83</td><td class='num'>2:01</td><td class='num'>13.2m</td><td class='num'>92</td><td class='num'>26%</td></tr><tr><td class='wk'>Medvi</td><td class='num'>52</td><td class='num'>56s</td><td class='num'>11.0m</td><td class='num'>244</td><td class='num'>71%</td></tr><tr><td class='wk'>SnagRX</td><td class='num'>39</td><td class='num'>1:05</td><td class='num'>9.4m</td><td class='num'>1</td><td class='num'>100%</td></tr></tbody>
-  </table></div>
+  <div class="wk-detail">
+    <div class="wk-detail-lab">Week-by-week</div>
+    <div class='wrap-x'><table class='wktable'><thead><tr><th>Week</th><th>Voice&nbsp;answered</th><th>ASA</th><th>AHT</th><th>Email&nbsp;replies</th><th>FRT&nbsp;≤4h</th></tr></thead><tbody><tr><td class='wk'>Aug 3–9</td><td class='num'>171</td><td class='num'>31:22</td><td class='num'>12.2m</td><td class='num'>162</td><td class='num'>36%</td></tr><tr><td class='wk'>Aug 10–16</td><td class='num'>261</td><td class='num'>8:03</td><td class='num'>12.5m</td><td class='num'>199</td><td class='num'>23%</td></tr><tr><td class='wk'>Aug 17–23</td><td class='num'>411</td><td class='num'>4:47</td><td class='num'>13.3m</td><td class='num'>270</td><td class='num'>34%</td></tr><tr><td class='wk'>Aug 24–30</td><td class='num'>448</td><td class='num'>1:09</td><td class='num'>13.5m</td><td class='num'>348</td><td class='num'>41%</td></tr><tr><td class='wk'>Aug 31–Sep 6</td><td class='num'>1,761</td><td class='num'>4:50</td><td class='num'>11.9m</td><td class='num'>363</td><td class='num'>50%</td></tr><tr><td class='wk'>Sep 7–13</td><td class='num'>1,626</td><td class='num'>1:37</td><td class='num'>11.5m</td><td class='num'>125</td><td class='num'>35%</td></tr><tr><td class='wk'>Sep 14–20 <span class='chip neutral'>in progress</span></td><td class='num'>432</td><td class='num'>21s</td><td class='num'>11.9m</td><td class='num'>3</td><td class='num'>67%</td></tr></tbody></table></div>
+  </div>
 </section>
 
   <footer>
